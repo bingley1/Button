@@ -4,7 +4,6 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -12,6 +11,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.button.ui.theme.ButtonTheme
 import com.example.library.Buttons
+import com.example.library.CustomButtons
 import com.sryang.library.JetCaster
 import com.sryang.library.JetSnack
 import com.sryang.library.JetSurvey
@@ -28,10 +28,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             ButtonTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
+                    CustomButtons()
                 }
             }
         }
